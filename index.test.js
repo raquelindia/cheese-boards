@@ -142,12 +142,14 @@ test('test eager loading', async () =>  {
     const cheese2TitlePath = foundBoard[2].cheeses[0].title;
     const cheeseTitlePath = foundBoard[1].cheeses[1].title;
     const cheeseDescriptionPath = foundBoard[2].cheeses[1].description;
-    
+    const cheeseBoardsPath = foundCheese[1].boards[1].type;
+    const cheeseBoardsPath2 = foundCheese[1].boards[1].rating;
     
     expect(cheeseTitlePath).toBe("Swiss");
     expect(cheeseDescriptionPath).toBe("holes");
     expect(cheese2TitlePath).toBe("pepper jack");
-
+    expect(cheeseBoardsPath).toBe("wood");
+    expect(cheeseBoardsPath2).toBe(5);
 
  })
  
